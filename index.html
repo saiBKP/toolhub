@@ -69,7 +69,7 @@
     max-width:520px;
   }
   main{
-    max-width:760px;
+    max-width:960px;
     margin:0 auto;
     padding:22px 20px 60px;
   }
@@ -77,14 +77,16 @@
     display:flex;
     flex-direction:column;
     gap:22px;
+    justify-content:center;
   }
   @media(min-width:680px){
     .layout{
       flex-direction:row;
       align-items:flex-start;
+      justify-content:center;
     }
-    .grid{flex:1;min-width:0;}
-    .aside{width:210px;flex-shrink:0;}
+    .grid{flex:1;min-width:0;max-width:660px;}
+    .aside{width:230px;flex-shrink:0;}
   }
   .grid{
     display:flex;
@@ -104,7 +106,7 @@
   .stub.c{background:var(--plum);}
   .stub.d{background:var(--moss);}
   .stub.e{background:var(--gold);}
-  .card-body{flex:1;padding:16px 16px 14px;}
+  .card-body{flex:1;min-width:0;padding:16px 16px 14px;}
   .card-top{display:flex;align-items:flex-start;gap:12px;}
   .icon{
     width:38px;height:38px;border-radius:9px;
