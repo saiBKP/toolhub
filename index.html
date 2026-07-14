@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BKP Tool Hub">
+<title>Blue Kangaroo Packoutz — Tool Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1C3557;
+    --steel:#3E7CB1;
+    --steel-ink:#1F4C6F;
+    --orange:#E8622C;
+    --orange-ink:#96360F;
+    --moss:#5C7A4E;
+    --moss-ink:#33472A;
+    --plum:#6B4B8A;
+    --plum-ink:#432C5C;
+    --paper:#F6F3EC;
+    --ink:#20211D;
+    --ink-soft:#5B5A54;
+    --line:#D8D2C2;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:28px 20px 24px;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#9FC0DC;
+    font-weight:600;
+    margin:0 0 4px;
+    font-family:'Work Sans',sans-serif;
+  }
+  header h1{
+    margin:0;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    font-size:34px;
+    line-height:1;
+    color:#fff;
+  }
+  header p{
+    margin:8px 0 0;
+    color:#C9D6E4;
+    font-size:14px;
+    max-width:520px;
+  }
+  main{
+    max-width:640px;
+    margin:0 auto;
+    padding:22px 20px 60px;
+  }
+  .grid{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .card{
+    display:flex;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .stub{width:10px;flex-shrink:0;}
+  .stub.a{background:var(--steel);}
+  .stub.b{background:var(--orange);}
+  .stub.c{background:var(--plum);}
+  .stub.d{background:var(--moss);}
+  .card-body{flex:1;padding:16px 16px 14px;}
+  .card-top{display:flex;align-items:flex-start;gap:12px;}
+  .icon{
+    width:38px;height:38px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:19px;flex-shrink:0;
+  }
+  .icon.a{background:#E8F0F6;color:var(--steel-ink);}
+  .icon.b{background:#FBE8DF;color:var(--orange-ink);}
+  .icon.c{background:#EFE7F4;color:var(--plum-ink);}
+  .icon.d{background:#E9EFE4;color:var(--moss-ink);}
+  .card h2{
+    font-size:19px;
+    margin:0;
+    font-weight:600;
+  }
+  .row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:12px;
+  }
+  .row.secondary{
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px dashed var(--line);
+  }
+  .row-label{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    flex:1;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .btn{
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    font-size:13px;
+    font-weight:500;
+    padding:7px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--paper);}
+  .btn.copy{padding:7px 10px;}
+  .btn.copied{
+    background:var(--moss);
+    border-color:var(--moss);
+    color:#fff;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Blue Kangaroo Packoutz</p>
+  <h1>Tool Hub</h1>
+  <p>Quick access to the team's tools. Tap open to launch, or copy to share the link.</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <div class="card">
+      <div class="stub a"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon a">📋</div>
+          <h2>Labor logs</h2>
+        </div>
+        <div class="row">
+          <span class="row-label">saibkp.github.io/laborLog</span>
+          <a class="btn" href="https://saibkp.github.io/laborLog/" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://saibkp.github.io/laborLog/" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">Instructions</span>
+          <a class="btn" href="https://docs.google.com/document/d/1RHCK5JUgsp9ov2dY1fM1AY53wiv-52qDYlCnuvhQ7S0/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/document/d/1RHCK5JUgsp9ov2dY1fM1AY53wiv-52qDYlCnuvhQ7S0/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stub b"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon b">🎥</div>
+          <h2>Scope note creator (Claude)</h2>
+        </div>
+        <div class="row">
+          <span class="row-label">claude.ai project</span>
+          <a class="btn" href="https://claude.ai/project/019edc17-5f2a-741d-b213-f135cfdae8b1" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://claude.ai/project/019edc17-5f2a-741d-b213-f135cfdae8b1" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">Instructions</span>
+          <a class="btn" href="https://docs.google.com/document/d/15J7z_GVs4kVkxhahMER7neheQMyoJpkkEWNf7Mi43I4/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/document/d/15J7z_GVs4kVkxhahMER7neheQMyoJpkkEWNf7Mi43I4/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stub c"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon c">📝</div>
+          <h2>SOP creator (Claude)</h2>
+        </div>
+        <div class="row">
+          <span class="row-label">claude.ai project</span>
+          <a class="btn" href="https://claude.ai/project/019edb91-0b92-759a-8a3f-542bdb7c4e7f" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://claude.ai/project/019edb91-0b92-759a-8a3f-542bdb7c4e7f" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stub d"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon d">📣</div>
+          <h2>LinkedIn post manager</h2>
+        </div>
+        <div class="row">
+          <span class="row-label">saibkp.github.io/linkedinautomation</span>
+          <a class="btn" href="https://saibkp.github.io/linkedinautomation/" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://saibkp.github.io/linkedinautomation/" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+document.querySelectorAll('.btn.copy').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const url = btn.dataset.url;
+    const original = btn.textContent;
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1400);
+  });
+});
+</script>
+
+</body>
+</html>
