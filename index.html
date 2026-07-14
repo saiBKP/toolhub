@@ -22,6 +22,9 @@
     --moss-ink:#33472A;
     --plum:#6B4B8A;
     --plum-ink:#432C5C;
+    --gold:#B8863C;
+    --gold-ink:#6E4F1F;
+    --muted:#9A9488;
     --paper:#F6F3EC;
     --ink:#20211D;
     --ink-soft:#5B5A54;
@@ -66,9 +69,22 @@
     max-width:520px;
   }
   main{
-    max-width:640px;
+    max-width:760px;
     margin:0 auto;
     padding:22px 20px 60px;
+  }
+  .layout{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  @media(min-width:680px){
+    .layout{
+      flex-direction:row;
+      align-items:flex-start;
+    }
+    .grid{flex:1;min-width:0;}
+    .aside{width:210px;flex-shrink:0;}
   }
   .grid{
     display:flex;
@@ -87,6 +103,7 @@
   .stub.b{background:var(--orange);}
   .stub.c{background:var(--plum);}
   .stub.d{background:var(--moss);}
+  .stub.e{background:var(--gold);}
   .card-body{flex:1;padding:16px 16px 14px;}
   .card-top{display:flex;align-items:flex-start;gap:12px;}
   .icon{
@@ -98,6 +115,7 @@
   .icon.b{background:#FBE8DF;color:var(--orange-ink);}
   .icon.c{background:#EFE7F4;color:var(--plum-ink);}
   .icon.d{background:#E9EFE4;color:var(--moss-ink);}
+  .icon.e{background:#F3E8D3;color:var(--gold-ink);}
   .card h2{
     font-size:19px;
     margin:0;
@@ -144,6 +162,49 @@
     border-color:var(--moss);
     color:#fff;
   }
+  .side-label{
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+    margin:0 0 8px;
+  }
+  .side-card{
+    display:flex;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .side-card .stub{width:7px;background:var(--muted);}
+  .side-card .side-body{padding:12px 12px 11px;flex:1;min-width:0;}
+  .side-card .side-top{display:flex;align-items:center;gap:8px;}
+  .side-card .side-icon{
+    width:26px;height:26px;border-radius:7px;
+    background:#EFEDE7;color:var(--muted);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;flex-shrink:0;
+  }
+  .side-card h3{
+    font-size:14px;
+    margin:0;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .side-card .side-sub{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin:2px 0 0;
+  }
+  .side-card .row{
+    margin-top:9px;
+    gap:6px;
+  }
+  .btn.sm{
+    padding:5px 9px;
+    font-size:12px;
+  }
 </style>
 </head>
 <body>
@@ -155,6 +216,7 @@
 </header>
 
 <main>
+  <div class="layout">
   <div class="grid">
 
     <div class="card">
@@ -226,6 +288,48 @@
         </div>
       </div>
     </div>
+
+    <div class="card">
+      <div class="stub e"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon e">🧾</div>
+          <h2>QuickBooks upload invoice system</h2>
+        </div>
+        <div class="row">
+          <span class="row-label">w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com</span>
+          <a class="btn" href="mailto:w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com">Open</a>
+          <button class="btn copy" data-url="w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com" aria-label="Copy email">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">Upload log</span>
+          <a class="btn" href="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="aside">
+    <p class="side-label">Also handy</p>
+    <div class="side-card">
+      <div class="stub"></div>
+      <div class="side-body">
+        <div class="side-top">
+          <div class="side-icon">🗓️</div>
+          <div>
+            <h3>Sai's hours</h3>
+            <p class="side-sub">Spreadsheet</p>
+          </div>
+        </div>
+        <div class="row">
+          <a class="btn sm" href="https://docs.google.com/spreadsheets/d/1d8GQumVnr_O74l4HiHDXU7eF5AvTpAu2nFC7Q9-Y-d0/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
+          <button class="btn sm copy" data-url="https://docs.google.com/spreadsheets/d/1d8GQumVnr_O74l4HiHDXU7eF5AvTpAu2nFC7Q9-Y-d0/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+  </aside>
 
   </div>
 </main>
