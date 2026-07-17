@@ -41,25 +41,32 @@
   header{
     background:var(--navy);
     color:#fff;
-    padding:28px 20px 24px;
+    padding:12px 20px;
   }
   .header-inner{
     max-width:960px;
     margin:0 auto;
     display:flex;
-    align-items:flex-start;
+    align-items:center;
     justify-content:space-between;
     gap:16px;
     flex-wrap:wrap;
   }
-  .header-text{flex:1;min-width:200px;}
+  .header-text{
+    flex:1;
+    min-width:160px;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    flex-wrap:wrap;
+  }
   .eyebrow{
-    font-size:12px;
-    letter-spacing:0.14em;
+    font-size:10.5px;
+    letter-spacing:0.12em;
     text-transform:uppercase;
     color:#9FC0DC;
     font-weight:600;
-    margin:0 0 4px;
+    margin:0;
     font-family:'Work Sans',sans-serif;
   }
   header h1{
@@ -68,15 +75,9 @@
     font-weight:700;
     letter-spacing:0.02em;
     text-transform:uppercase;
-    font-size:34px;
+    font-size:20px;
     line-height:1;
     color:#fff;
-  }
-  header p{
-    margin:8px 0 0;
-    color:#C9D6E4;
-    font-size:14px;
-    max-width:520px;
   }
   .sai-toggle{
     display:flex;
@@ -85,7 +86,6 @@
     cursor:pointer;
     user-select:none;
     flex-shrink:0;
-    padding-top:4px;
   }
   .sai-toggle input{display:none;}
   .toggle-track{
@@ -112,7 +112,7 @@
   main{
     max-width:960px;
     margin:0 auto;
-    padding:22px 20px 60px;
+    padding:18px 20px 60px;
   }
   .layout{
     display:flex;
@@ -264,7 +264,6 @@
     <div class="header-text">
       <p class="eyebrow">Blue Kangaroo Packoutz</p>
       <h1>Tool Hub</h1>
-      <p>Quick access to the team's tools. Tap open to launch, or copy to share the link.</p>
     </div>
     <label class="sai-toggle">
       <input type="checkbox" id="saiModeToggle">
@@ -398,6 +397,11 @@
           <span class="row-label">🔑 GitHub repo</span>
           <a class="btn" href="https://github.com/saiBKP/linkedinautomation" target="_blank" rel="noopener">Open</a>
           <button class="btn copy" data-url="https://github.com/saiBKP/linkedinautomation" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Database (Supabase)</span>
+          <a class="btn" href="https://supabase.com/dashboard/project/amvuwoiimfjtlqzxanae" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://supabase.com/dashboard/project/amvuwoiimfjtlqzxanae" aria-label="Copy link">Copy</button>
         </div>
       </div>
     </div>
