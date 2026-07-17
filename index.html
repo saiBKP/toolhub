@@ -43,6 +43,16 @@
     color:#fff;
     padding:28px 20px 24px;
   }
+  .header-inner{
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .header-text{flex:1;min-width:200px;}
   .eyebrow{
     font-size:12px;
     letter-spacing:0.14em;
@@ -67,6 +77,37 @@
     color:#C9D6E4;
     font-size:14px;
     max-width:520px;
+  }
+  .sai-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    user-select:none;
+    flex-shrink:0;
+    padding-top:4px;
+  }
+  .sai-toggle input{display:none;}
+  .toggle-track{
+    width:38px;height:21px;border-radius:999px;
+    background:rgba(255,255,255,0.22);
+    position:relative;
+    transition:background .15s ease;
+    flex-shrink:0;
+  }
+  .toggle-thumb{
+    position:absolute;top:2px;left:2px;
+    width:17px;height:17px;border-radius:50%;
+    background:#fff;
+    transition:transform .15s ease;
+  }
+  .sai-toggle input:checked + .toggle-track{background:var(--orange);}
+  .sai-toggle input:checked + .toggle-track .toggle-thumb{transform:translateX(17px);}
+  .toggle-label{
+    font-size:13px;
+    font-weight:600;
+    color:#E8EEF4;
+    white-space:nowrap;
   }
   main{
     max-width:960px;
@@ -212,14 +253,25 @@
     gap:6px;
   }
   .btn:hover{background:var(--paper);}
+  .sai-only{display:none;}
+  body.sai-mode .sai-only{display:flex;}
 </style>
 </head>
 <body>
 
 <header>
-  <p class="eyebrow">Blue Kangaroo Packoutz</p>
-  <h1>Tool Hub</h1>
-  <p>Quick access to the team's tools. Tap open to launch, or copy to share the link.</p>
+  <div class="header-inner">
+    <div class="header-text">
+      <p class="eyebrow">Blue Kangaroo Packoutz</p>
+      <h1>Tool Hub</h1>
+      <p>Quick access to the team's tools. Tap open to launch, or copy to share the link.</p>
+    </div>
+    <label class="sai-toggle">
+      <input type="checkbox" id="saiModeToggle">
+      <span class="toggle-track"><span class="toggle-thumb"></span></span>
+      <span class="toggle-label">🔑 Sai Mode</span>
+    </label>
+  </div>
 </header>
 
 <main>
@@ -242,6 +294,45 @@
           <span class="row-label">Instructions</span>
           <a class="btn" href="https://docs.google.com/document/d/1RHCK5JUgsp9ov2dY1fM1AY53wiv-52qDYlCnuvhQ7S0/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
           <button class="btn copy" data-url="https://docs.google.com/document/d/1RHCK5JUgsp9ov2dY1fM1AY53wiv-52qDYlCnuvhQ7S0/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Database (Firebase)</span>
+          <a class="btn" href="https://console.firebase.google.com/project/laborlog-d90ee/overview" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://console.firebase.google.com/project/laborlog-d90ee/overview" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 GitHub repo</span>
+          <a class="btn" href="https://github.com/saiBKP/laborLog" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://github.com/saiBKP/laborLog" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stub e"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon e">🧾</div>
+          <h2>QuickBooks upload invoice system</h2>
+        </div>
+        <div class="row">
+          <span class="row-label" title="w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com">w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com</span>
+          <button class="btn copy" data-url="w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com" aria-label="Copy email">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">Instructions</span>
+          <a class="btn" href="https://docs.google.com/document/d/1QYVLgN2qGDkBgIbGE-anfBlc5oO1Z9cIf2PG3ZAVcl0/edit?tab=t.0#heading=h.2jm5u81l0fms" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/document/d/1QYVLgN2qGDkBgIbGE-anfBlc5oO1Z9cIf2PG3ZAVcl0/edit?tab=t.0#heading=h.2jm5u81l0fms" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">Upload log</span>
+          <a class="btn" href="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Make.com scenario</span>
+          <a class="btn" href="https://us2.make.com/2544980/scenarios/5654463/edit" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://us2.make.com/2544980/scenarios/5654463/edit" aria-label="Copy link">Copy</button>
         </div>
       </div>
     </div>
@@ -293,24 +384,20 @@
           <a class="btn" href="https://saibkp.github.io/linkedinautomation/" target="_blank" rel="noopener">Open</a>
           <button class="btn copy" data-url="https://saibkp.github.io/linkedinautomation/" aria-label="Copy link">Copy</button>
         </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="stub e"></div>
-      <div class="card-body">
-        <div class="card-top">
-          <div class="icon e">🧾</div>
-          <h2>QuickBooks upload invoice system</h2>
-        </div>
-        <div class="row">
-          <span class="row-label" title="w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com">w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com</span>
-          <button class="btn copy" data-url="w2zy3q1epuvzwnsm54d0w0lbu19fv3j1@hook.us2.make.com" aria-label="Copy email">Copy</button>
-        </div>
         <div class="row secondary">
-          <span class="row-label">Upload log</span>
-          <a class="btn" href="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" target="_blank" rel="noopener">Open</a>
-          <button class="btn copy" data-url="https://docs.google.com/spreadsheets/d/1hnkFP-S-KfXRWPthZCRNyP8_i_BCADAyIHlVr_gRun8/edit?usp=sharing" aria-label="Copy link">Copy</button>
+          <span class="row-label">Instructions</span>
+          <a class="btn" href="https://docs.google.com/document/d/1Fmpu0tMzJggQcYcFXkS76VzG8EblufVGJDSiidS8IEA/edit?tab=t.0" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://docs.google.com/document/d/1Fmpu0tMzJggQcYcFXkS76VzG8EblufVGJDSiidS8IEA/edit?tab=t.0" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Make.com scenario</span>
+          <a class="btn" href="https://us2.make.com/2544980/scenarios/5618155/edit" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://us2.make.com/2544980/scenarios/5618155/edit" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 GitHub repo</span>
+          <a class="btn" href="https://github.com/saiBKP/linkedinautomation" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://github.com/saiBKP/linkedinautomation" aria-label="Copy link">Copy</button>
         </div>
       </div>
     </div>
@@ -362,6 +449,10 @@ document.querySelectorAll('.btn.copy').forEach(btn => {
       btn.classList.remove('copied');
     }, 1400);
   });
+});
+
+document.getElementById('saiModeToggle').addEventListener('change', (e) => {
+  document.body.classList.toggle('sai-mode', e.target.checked);
 });
 </script>
 
