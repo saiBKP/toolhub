@@ -24,6 +24,8 @@
     --plum-ink:#432C5C;
     --gold:#B8863C;
     --gold-ink:#6E4F1F;
+    --teal:#2C6E6B;
+    --teal-ink:#163B3A;
     --muted:#9A9488;
     --paper:#F6F3EC;
     --ink:#20211D;
@@ -147,6 +149,7 @@
   .stub.c{background:var(--plum);}
   .stub.d{background:var(--moss);}
   .stub.e{background:var(--gold);}
+  .stub.f{background:var(--teal);}
   .card-body{flex:1;min-width:0;padding:16px 16px 14px;}
   .card-top{display:flex;align-items:flex-start;gap:12px;}
   .icon{
@@ -159,10 +162,16 @@
   .icon.c{background:#EFE7F4;color:var(--plum-ink);}
   .icon.d{background:#E9EFE4;color:var(--moss-ink);}
   .icon.e{background:#F3E8D3;color:var(--gold-ink);}
+  .icon.f{background:#DDEDEC;color:var(--teal-ink);}
   .card h2{
     font-size:19px;
     margin:0;
     font-weight:600;
+  }
+  .card-sub{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin:2px 0 0;
   }
   .row{
     display:flex;
@@ -402,6 +411,39 @@
           <span class="row-label">🔑 Database (Supabase)</span>
           <a class="btn" href="https://supabase.com/dashboard/project/amvuwoiimfjtlqzxanae" target="_blank" rel="noopener">Open</a>
           <button class="btn copy" data-url="https://supabase.com/dashboard/project/amvuwoiimfjtlqzxanae" aria-label="Copy link">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stub f"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="icon f">📊</div>
+          <div>
+            <h2>PSA &amp; QuickBooks dashboards</h2>
+            <p class="card-sub">Login: BKP / Gladstone</p>
+          </div>
+        </div>
+        <div class="row">
+          <span class="row-label">PSA Dashboard</span>
+          <a class="btn" href="https://psa-agent-production.up.railway.app/dashboard" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://psa-agent-production.up.railway.app/dashboard" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary">
+          <span class="row-label">QuickBooks AR Dashboard</span>
+          <a class="btn" href="https://psa-agent-production.up.railway.app/ar/dashboard" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://psa-agent-production.up.railway.app/ar/dashboard" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Railway project</span>
+          <a class="btn" href="https://railway.com/project/58a3108b-2668-4439-984b-47a4b54defe3?environmentId=7d6b166d-b0df-4309-a550-3d7547930dad" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://railway.com/project/58a3108b-2668-4439-984b-47a4b54defe3?environmentId=7d6b166d-b0df-4309-a550-3d7547930dad" aria-label="Copy link">Copy</button>
+        </div>
+        <div class="row secondary sai-only">
+          <span class="row-label">🔑 Make.com scenario</span>
+          <a class="btn" href="https://us2.make.com/2544980/scenarios/5828364/edit" target="_blank" rel="noopener">Open</a>
+          <button class="btn copy" data-url="https://us2.make.com/2544980/scenarios/5828364/edit" aria-label="Copy link">Copy</button>
         </div>
       </div>
     </div>
